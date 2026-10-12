@@ -103,14 +103,19 @@ Clipline stays out of full screen apps, a video or a game, unless you turn on
 
 ## Install
 
-Download a zip from the latest release, unzip it anywhere and open
-`Clipline.exe`. There is no installer: it changes no system settings, and
-**Start with Windows** is a per-user entry you can turn off from the tray.
-To remove it, quit from the tray and delete the folder; your line and
-settings are in `%LOCALAPPDATA%\Clipline`.
+Download [Clipline Setup from the latest release](https://github.com/xxxJay123/Clipline/releases/latest)
+for a per-user installation with no administrator prompt. Setup includes .NET,
+adds a Start menu shortcut and an uninstaller, and lets you choose whether to
+start Clipline with Windows (selected by default).
+
+For a portable copy, download a zip, unzip it anywhere and open `Clipline.exe`.
+Remove a setup installation from Windows **Installed apps**, or quit and delete
+the portable folder. Your line and settings are in `%LOCALAPPDATA%\Clipline`;
+the interactive uninstaller asks before removing them.
 
 | Download | |
 |:--|:--|
+| `Clipline-Setup-0.1.0-x64.exe` | Installer for 64-bit Intel/AMD Windows PCs. .NET is included. |
 | `Clipline-win-x64.zip` | Runs on any 64-bit Windows 10 or 11. .NET is inside. |
 | `Clipline-win-arm64.zip` | The same, for Arm PCs. |
 | `Clipline-win-x64-small.zip` | Under a megabyte. Needs the [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0). |
@@ -129,6 +134,7 @@ cd Clipline
 ./scripts/build.ps1                       # build and run the tests
 dotnet run --project src/Clipline -- --demo   # a line of made-up screenshots
 ./scripts/publish.ps1 -Runtime win-x64    # artifacts/Clipline-win-x64.zip
+./scripts/installer.ps1 -Runtime win-x64  # setup exe; requires Inno Setup 6
 ```
 
 `--demo` uses its own folder in `%TEMP%` and never touches your screenshots.

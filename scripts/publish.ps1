@@ -31,6 +31,7 @@ dotnet publish (Join-Path $root 'src/Clipline/Clipline.csproj') -c $Configuratio
 if ($LASTEXITCODE) { exit $LASTEXITCODE }
 
 Copy-Item (Join-Path $root 'LICENSE') $out
+Copy-Item (Join-Path $root 'NOTICE.md') $out
 $zip = Join-Path $root "artifacts/$name.zip"
 if (Test-Path $zip) { Remove-Item $zip -Force }
 Compress-Archive -Path "$out/*" -DestinationPath $zip

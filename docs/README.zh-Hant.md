@@ -85,10 +85,17 @@ Clipline 自己唔截圖。佢監察 Windows 本身儲存截圖嘅資料夾,一�
 
 ## 安裝
 
-由最新 release 下載 zip,解壓到任何位置,開 `Clipline.exe`。冇安裝程式,唔會改系統設定;「開機自動啟動」只係目前使用者嘅一個項目,隨時可以喺系統匣關。移除:喺系統匣結束,再刪除資料夾;條繩同設定喺 `%LOCALAPPDATA%\Clipline`。
+由 [最新 Release](https://github.com/xxxJay123/Clipline/releases/latest) 下載 **Clipline Setup**。
+安裝程式已包 .NET,只為目前使用者安裝,唔需要管理員權限;會建立開始選單捷徑同解除安裝項目。
+安裝時可以選擇「Start Clipline with Windows」(預設勾選)。
+
+想用免安裝版,下載 zip,解壓後開 `Clipline.exe`。
+Setup 版可以喺 Windows「已安裝的應用程式」移除;免安裝版就喺系統匣結束再刪除資料夾。
+條繩同設定喺 `%LOCALAPPDATA%\Clipline`;互動式解除安裝會先問你要唔要刪除呢啲資料。
 
 | 下載 | |
 |:--|:--|
+| `Clipline-Setup-0.1.0-x64.exe` | Intel/AMD 64 位元 Windows 安裝程式,已包 .NET。 |
 | `Clipline-win-x64.zip` | 任何 64 位元 Windows 10/11 都用得,已包 .NET。 |
 | `Clipline-win-arm64.zip` | 同上,俾 Arm 電腦。 |
 | `Clipline-win-x64-small.zip` | 少過 1MB,需要 [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0)。 |
