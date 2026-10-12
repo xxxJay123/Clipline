@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <Version>0.1.0</Version>
+    <Authors>Jay Cheng</Authors>
+    <Product>Clipline</Product>
+    <Copyright>Copyright (c) 2026 Jay Cheng</Copyright>
+  </PropertyGroup>
+</Project>

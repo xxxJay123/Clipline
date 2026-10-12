@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- Only for Control.DoDragDrop with a drag image, which draws the native Explorer drag preview. -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- The DPI awareness stays in app.manifest: it is a WPF app, and WPF reads it from there. -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\Clipline.ico</ApplicationIcon>
+    <AssemblyName>Clipline</AssemblyName>
+    <RootNamespace>Clipline</RootNamespace>
+    <StartupObject>Clipline.Program</StartupObject>
+    <Description>Screenshots on a line at the top of your screen.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clipline.Core\Clipline.Core.csproj" />
+    <Resource Include="Assets\Clipline.ico" />
+  </ItemGroup>
+</Project>

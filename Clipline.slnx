@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Clipline.Core/Clipline.Core.csproj" />
+    <Project Path="src/Clipline/Clipline.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Clipline.Tests/Clipline.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/IconMaker/IconMaker.csproj" />
+  </Folder>
+</Solution>
