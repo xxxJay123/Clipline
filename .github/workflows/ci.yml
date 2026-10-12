@@ -23,7 +23,7 @@ jobs:
       - name: Draw the line without a screen
         shell: pwsh
         run: ./scripts/snapshot.ps1 -Out artifacts/snapshot
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: snapshot
           path: artifacts/snapshot/*.png
@@ -51,7 +51,7 @@ jobs:
         run: |
           if ('${{ matrix.small }}' -eq 'true') { ./scripts/publish.ps1 -Runtime ${{ matrix.runtime }} -Small }
           else { ./scripts/publish.ps1 -Runtime ${{ matrix.runtime }} }
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: Clipline-${{ matrix.runtime }}${{ matrix.small && '-small' || '' }}
           path: artifacts/*.zip*
